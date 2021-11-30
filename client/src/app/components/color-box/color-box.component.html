@@ -1,0 +1,5 @@
+<div class="color"
+     [ngStyle]="{backgroundColor: color.name}"
+     (click)="onColorClick()">
+  <div class="bar" [ngStyle]="{width: color.width+'rem'}">{{color.votes || ''}}</div>
+</div>

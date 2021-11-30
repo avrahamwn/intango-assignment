@@ -1,0 +1,14 @@
+<ng-container *ngIf="colors$ | async as colors; else serverErr">
+  <h1>Click on a color box and vote your favorite color!</h1>  
+  <div class="colors">
+    <app-color-box class="color"
+                   *ngFor="let color of colors"
+                   [color]="color">
+      {{color}}
+    </app-color-box>
+  </div>
+</ng-container>
+
+<ng-template #serverErr>
+  <h1>Run the command `npm run dev` in the /server folder to start the server</h1>
+</ng-template>
